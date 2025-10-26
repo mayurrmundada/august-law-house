@@ -1,4 +1,8 @@
 require('dotenv').config();
+console.log('Loaded environment variables:');
+console.log('SENDGRID_API_KEY exists?', !!process.env.SENDGRID_API_KEY);
+console.log('FROM_EMAIL:', process.env.FROM_EMAIL);
+console.log('TO_EMAIL:', process.env.TO_EMAIL);
 const express = require('express');
 const cors = require('cors');
 const nodemailer = require('nodemailer');
@@ -16,12 +20,22 @@ if (!process.env.SENDGRID_API_KEY || !process.env.FROM_EMAIL || !process.env.TO_
 }
 
 // SendGrid transporter
-const transporter = nodemailer.createTransport(
+/*const transporter = nodemailer.createTransport(
   sgTransport({
     auth: { api_key: process.env.SENDGRID_API_KEY }
   })
-);
+);*/
+//const nodemailer = require('nodemailer');
 
+const transporter = nodemailer.createTransport({
+  host: 'smtp.sendgrid.net',
+  port: 587,
+  secure: false,
+  auth: {
+    user: 'apikey',                  // must literally be 'apikey'
+    pass: process.env.SENDGRID_API_KEY
+  }
+});
 transporter.verify((err, success) => {
   if (err) console.error('SendGrid transporter error:', err);
   else console.log('SendGrid transporter is ready');

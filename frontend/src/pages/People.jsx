@@ -2,9 +2,9 @@ import React from 'react'
 
 export default function People(){
   const team = [
-    { name: 'Adv. Priya Sharma', role: 'Founding Partner', bio: '20+ years in corporate law and arbitration.', img: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=800&auto=format&fit=crop' },
-    { name: 'Adv. Rahul Mehta', role: 'Partner - Litigation', bio: 'Experienced litigator in commercial disputes.', img: 'https://images.unsplash.com/photo-1545996124-9b2c0d9f1d9e?q=80&w=800&auto=format&fit=crop' },
-    { name: 'Adv. S. Iyer', role: 'Associate', bio: 'Focus on regulatory and compliance matters.', img: 'https://images.unsplash.com/photo-1545996124-9b2c0d9f1d9e?q=80&w=800&auto=format&fit=crop' }
+    { name: 'Adv. Bhardwaj Kulkarni', role: 'Founding Partner', bio: 'Experienced Data Protection and Compliance', img: '' },
+    { name: 'Adv. Siddharth Desarda', role: 'Founding Partner', bio: 'Experienced litigator in commercial disputes.', img: 'https://images.unsplash.com/photo-1545996124-9b2c0d9f1d9e?q=80&w=800&auto=format&fit=crop' },
+    { name: 'Adv. Yukta Yadav', role: 'Partner', bio: 'Experienced in Real Estate.', img: 'https://images.unsplash.com/photo-1545996124-9b2c0d9f1d9e?q=80&w=800&auto=format&fit=crop' }
   ]
 
   return (
